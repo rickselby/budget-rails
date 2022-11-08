@@ -31,3 +31,10 @@
 
 en:
   hello: "Hello world"
+  budgets:
+    create:
+      success: 'Budget was successfully created.'
+    update:
+      success: 'Budget was successfully updated.'
+    destroy:
+      success: 'Budget was successfully destroyed.'
