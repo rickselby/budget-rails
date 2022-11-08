@@ -2,13 +2,14 @@
 
 <h1>Budgets</h1>
 
-<div id="budgets">
+<div id="budgets" class="list-group">
   <% @budgets.each do |budget| %>
-    <%= render budget %>
-    <p>
-      <%= link_to "Show this budget", budget %>
-    </p>
+    <%= link_to budget.name, budget, class: 'list-group-item list-group-item-action' %>
   <% end %>
 </div>
 
-<%= link_to "New budget", new_budget_path %>
+<p class="mt-4">
+<%= link_to new_budget_path, class: 'btn btn-primary' do %>
+  New Budget
+<% end %>
+</p>
