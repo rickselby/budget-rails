@@ -1,7 +1,8 @@
 require "test_helper"
 
 class BudgetTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  test "should not save without a name" do
+    budget = Budget.new
+    assert_not budget.save, "Saved a budget without a name"
+  end
 end
