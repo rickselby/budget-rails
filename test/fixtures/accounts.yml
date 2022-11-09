@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: First Account
+  credit: 1000
+  budget: one
+
+two:
+  name: Second Account
+  credit: 100
+  budget: two

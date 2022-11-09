@@ -30,7 +30,6 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
   budgets:
     create:
       success: 'Budget was successfully created.'
@@ -38,3 +37,10 @@ en:
       success: 'Budget was successfully updated.'
     destroy:
       success: 'Budget was successfully destroyed.'
+  accounts:
+    create:
+      success: 'Account was successfully created.'
+    update:
+      success: 'Account was successfully updated.'
+    destroy:
+      success: 'Account was successfully destroyed.'

@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<h1><%= @account.name %></h1>
+
+<div>
+  <%= link_to "Edit this account", edit_budget_account_path(@budget, @account) %> |
+  <%= link_to "Back to #{@budget.name}", budget_path(@budget) %>
+
+  <%= button_to "Destroy this account", [@budget, @account], method: :delete %>
+</div>

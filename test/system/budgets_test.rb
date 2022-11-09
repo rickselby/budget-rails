@@ -15,7 +15,7 @@ class BudgetsTest < ApplicationSystemTestCase
 
   test 'should create budget' do
     visit budgets_url
-    click_on 'New budget'
+    click_on 'New Budget'
 
     fill_in 'Name', with: @budget.name
     click_on 'Create Budget'

@@ -2,6 +2,20 @@
 
 <h1><%= @budget.name %></h1>
 
+<h2>Accounts</h2>
+
+<div id="accounts" class="list-group">
+  <% @budget.accounts.each do |account| %>
+    <%= link_to account.name, [@budget, account], class: 'list-group-item list-group-item-action' %>
+  <% end %>
+</div>
+
+<p class="mt-4">
+  <%= link_to new_budget_account_path(@budget), class: 'btn btn-primary' do %>
+    New Account
+  <% end %>
+</p>
+
 <div>
   <%= link_to "Edit this budget", edit_budget_path(@budget) %> |
   <%= link_to "Back to budgets", budgets_path %>
