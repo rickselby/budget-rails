@@ -3,9 +3,12 @@
 require 'test_helper'
 
 class AccountsControllerTest < ActionDispatch::IntegrationTest
+  include Devise::Test::IntegrationHelpers
+
   setup do
     @account = accounts(:one)
     @budget = @account.budget
+    sign_in @budget.user
   end
 
   test 'should not get index' do

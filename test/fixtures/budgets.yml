@@ -2,6 +2,8 @@
 
 one:
   name: First Budget
+  user: one
 
 two:
   name: Second Budget
+  user: two

@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class HomeController < ApplicationController
-  def index
-  end
+  skip_after_action :verify_authorized, only: :index
+
+  def index; end
 end

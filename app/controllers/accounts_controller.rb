@@ -3,6 +3,7 @@
 class AccountsController < ApplicationController
   before_action :set_budget
   before_action :set_account, only: %i[show edit update destroy]
+  before_action :authorize_model
 
   # GET /budgets/:budget_id/accounts/1 or /budgets/:budget_id/accounts/1.json
   def show; end
@@ -66,5 +67,9 @@ class AccountsController < ApplicationController
   # Only allow a list of trusted parameters through.
   def account_params
     params.require(:account).permit(:name, :credit)
+  end
+
+  def authorize_model
+    authorize @account || Account
   end
 end

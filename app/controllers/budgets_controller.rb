@@ -2,10 +2,11 @@
 
 class BudgetsController < ApplicationController
   before_action :set_budget, only: %i[show edit update destroy]
+  before_action :authorize_model
 
   # GET /budgets or /budgets.json
   def index
-    @budgets = Budget.all
+    @budgets = policy_scope Budget
   end
 
   # GET /budgets/1 or /budgets/1.json
@@ -21,7 +22,7 @@ class BudgetsController < ApplicationController
 
   # POST /budgets or /budgets.json
   def create
-    @budget = Budget.new(budget_params)
+    @budget = current_user.budgets.new(budget_params)
 
     respond_to do |format|
       if @budget.save
@@ -59,13 +60,17 @@ class BudgetsController < ApplicationController
 
   private
 
-  # Use callbacks to share common setup or constraints between actions.
-  def set_budget
-    @budget = Budget.find(params[:id])
-  end
-
-  # Only allow a list of trusted parameters through.
   def budget_params
     params.require(:budget).permit(:name)
+  end
+
+  def set_budget
+    @budget = policy_scope(Budget).find(params[:id])
+  end
+
+  def authorize_model
+    logger.error "foo bar"
+    logger.error @budget
+    authorize @budget || Budget
   end
 end
