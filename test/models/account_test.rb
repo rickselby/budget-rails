@@ -8,4 +8,10 @@ class AccountTest < ActiveSupport::TestCase
 
     assert_not account.save, 'Saved an account without a name'
   end
+
+  test 'should not save without a budget' do
+    account = Account.new name: 'some name'
+
+    assert_not account.save, 'Saved an account without a budget'
+  end
 end
