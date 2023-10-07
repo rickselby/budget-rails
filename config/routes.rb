@@ -2,10 +2,11 @@
 
 Rails.application.routes.draw do
   devise_for :users
+
   resources :budgets do
     resources :accounts
   end
 
   # Defines the root path route ("/")
-  root 'budgets#index'
+  root 'home#index'
 end
