@@ -37,6 +37,7 @@
       </configuration>
       <configuration default="false" name="spec: budget-rails" type="RakeRunConfigurationType" factoryName="Rake">
         <module name="budget-rails" />
+        <predefined_log_file enabled="true" id="RUBY_RAKE" />
         <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
         <RAKE_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
         <RAKE_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
@@ -60,6 +61,7 @@
       </configuration>
       <configuration default="false" name="test: budget-rails" type="RakeRunConfigurationType" factoryName="Rake">
         <module name="budget-rails" />
+        <predefined_log_file enabled="true" id="RUBY_RAKE" />
         <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
         <RAKE_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
         <RAKE_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
